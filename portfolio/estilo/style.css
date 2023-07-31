@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap');
+
+/*  bg #101a35
+    background: linear-gradient(to bottom, rgba(29, 78, 216, 0.15), transparent 100%);
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter';
+    background-color: #101a35;
+    /* Fundo escuro */
+    color: #f7f7f7;
+    /* Fontes claras */
+}
+
+body a {
+    color: #3ED0FA;
+    text-decoration: none;
+    position: relative;
+    /* Adicione position relative para que o pseudo-elemento se posicione em relação a este elemento */
+}
+
+body a:hover {
+    color: #40FAFF;
+}
+
+header {
+    min-height: 150px;
+    text-align: center;
+    background: linear-gradient(to bottom, rgba(72, 118, 245, 0.39), transparent 100%);
+}
+
+header>h1 {
+    padding: 20px;
+    text-transform: uppercase;
+    font-size: 3em;
+    font-weight: bold;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
+}
+
+header>p {
+    margin-bottom: 40px;
+    font-size: 1.2em;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
+}
+
+nav {
+    padding: 40px;
+}
+
+/* Crie o sublinhado animado */
+li>a::before {
+    content: '';
+    /* Pseudo-elementos precisam de um content para serem exibidos */
+    position: absolute;
+    left: 0;
+    /* Começando da esquerda */
+    bottom: 0px;
+    /* Distância do sublinhado do texto */
+    width: 0;
+    /* Começando com largura 0 */
+    height: 1px;
+    /* Altura do sublinhado */
+    background-color: #40FAFF;
+    /* Cor do sublinhado */
+    transition: width 0.5s;
+    /* Tempo de transição para animação */
+}
+
+/* Animação quando o mouse passar por cima do link */
+li>a:hover::before {
+    width: 100%;
+    /* Ao passar o mouse, a largura do sublinhado será 100% */
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 200px;
+    width: 100%;
+    gap: 20px;
+}
+
+ul a {
+    font-size: 1.2em;
+}
+
+ul li {
+    text-align: center;
+    max-width: 220px;
+    box-shadow: 0px 0px 20px black;
+    border-radius: 5px 5px;
+    padding-top: 5px;
+}
+
+li>img {
+    width: 155px;
+    height: 155px;
+    margin-top: 5px;
+    border-radius: 5px 5px;
+}
