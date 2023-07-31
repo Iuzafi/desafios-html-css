@@ -11,6 +11,7 @@ background: linear-gradient(to bottom, rgba(29, 78, 216, 0.15), transparent 100%
 
 body {
     font-family: 'Inter';
+    font-weight: bold;
     background-color: #101a35;
     /* Fundo escuro */
     color: #f7f7f7;
@@ -53,7 +54,7 @@ nav {
 }
 
 /* Crie o sublinhado animado */
-li>a::before {
+li::before {
     content: '';
     /* Pseudo-elementos precisam de um content para serem exibidos */
     position: absolute;
@@ -63,7 +64,7 @@ li>a::before {
     /* Distância do sublinhado do texto */
     width: 0;
     /* Começando com largura 0 */
-    height: 1px;
+    height: 3px;
     /* Altura do sublinhado */
     background-color: #40FAFF;
     /* Cor do sublinhado */
@@ -72,7 +73,7 @@ li>a::before {
 }
 
 /* Animação quando o mouse passar por cima do link */
-li>a:hover::before {
+li:hover::before {
     width: 100%;
     /* Ao passar o mouse, a largura do sublinhado será 100% */
 }
@@ -86,6 +87,7 @@ ul {
     gap: 20px;    
 }
 
+
 ul a {
     font-size: 1.2em;
 }
@@ -96,8 +98,12 @@ ul li {
     box-shadow: 0px 0px 20px black;
     border-radius: 5px 5px;
     padding-top: 5px;    
-    transition-duration: .7s;
+    transition-duration: .6s;
     /* Animação de surgimento dos desafios */
+}
+
+ul li:hover {
+    box-shadow: 0px 0px 20px #40FAFF;
 }
 
 li>img {
@@ -107,8 +113,29 @@ li>img {
     border-radius: 5px 5px;
 }
 
+footer {
+    background-color: black;
+    text-align: center;
+    padding: 8px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
 /* Adicione a media query para telas menores */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px), (max-height: 600px) {
+    header {
+        min-height: 100px;
+    }
+
+    header>h1 {
+        font-size: 2.5em;
+    }
+
+    header>p {
+        font-size: 1.2em;
+    }
+
     ul {
         flex-direction: column;
         align-items: center;
@@ -117,10 +144,13 @@ li>img {
     ul li {
         margin-bottom: 20px;
     }
-}
 
-footer {
-    background-color: black;
-    text-align: center;
-    padding: 5px;
+    li::before {
+        bottom: 20px;
+    }
+
+
+    footer {
+        margin-top: 20px;
+    }
 }
