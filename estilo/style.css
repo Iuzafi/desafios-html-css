@@ -25,6 +25,7 @@ body a {
     /* Adicione position relative para que o pseudo-elemento se posicione em relação a este elemento */
 }
 
+/* Indicativo quando mouse sobrepor um link */
 body a:hover {
     color: #40FAFF;
 }
@@ -58,10 +59,14 @@ ul {
     list-style: none;
     display: flex;
     flex-direction: row;
+    /* Determina posição dos itens como em linha */
     flex-wrap: wrap;
+    /* Caso os itens passem do tamanho da página eles serão reposicionados para baixo */
     justify-content: space-around;
+    /* Ajusta os itens para ocuparem o tamanho disponível entre eles */
     width: 100%;
-    gap: 20px;    
+    gap: 20px;
+    /* Distancia entre cada item */    
 }
 
 
@@ -69,12 +74,15 @@ ul a {
     font-size: 1.2em;
 }
 
-ul li {
+li {
     text-align: center;
+    /* Alinhamento do texto interno */
     max-width: 220px;
+    /* Tamanho máximo de cada li */
     box-shadow: 0px 0px 20px black;
-    border-radius: 5px 5px;
-    padding-top: 5px;    
+    /* Sombra do fundo da caixa */
+    border-radius: 5px;
+    /* Efeito de borda nas caixas */
     transition-duration: .6s;
     /* Animação de surgimento dos desafios */
 }
@@ -105,7 +113,7 @@ li:hover::before {
     /* Ao passar o mouse, a largura do sublinhado será 100% */
 }
 
-
+/* Indicativo quando o mouse sobrepor um item da lista */
 ul li:hover {
     box-shadow: 0px 0px 20px #40FAFF;
 }
@@ -122,7 +130,9 @@ footer {
     text-align: center;
     padding: 8px;
     position: fixed;
+    /* Determina uma posição fixa para o footer que no caso será sempre no fim da página */
     bottom: 0;
+    /* Distancia do fim da página */
     width: 100%;
 }
 
