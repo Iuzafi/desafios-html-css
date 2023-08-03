@@ -85,6 +85,7 @@ li {
     /* Efeito de borda nas caixas */
     transition-duration: .6s;
     /* Animação de surgimento dos desafios */
+    margin-bottom: 10px;
 }
 
 li::before {
@@ -93,7 +94,7 @@ li::before {
     position: absolute;
     left: 0;
     /* Começando da esquerda */
-    bottom: 0px;
+    bottom: 10px;
     /* Distância do sublinhado do texto (Atualmente não está funcionando) */
     width: 0;
     /* Começando com largura 0 */
@@ -151,7 +152,6 @@ footer {
     }
 
     ul {
-        flex-direction: column;
         align-items: center;
     }
 
