@@ -54,34 +54,11 @@ nav {
 }
 
 /* Crie o sublinhado animado */
-li::before {
-    content: '';
-    /* Pseudo-elementos precisam de um content para serem exibidos */
-    position: absolute;
-    left: 0;
-    /* Começando da esquerda */
-    bottom: 0px;
-    /* Distância do sublinhado do texto */
-    width: 0;
-    /* Começando com largura 0 */
-    height: 3px;
-    /* Altura do sublinhado */
-    background-color: #40FAFF;
-    /* Cor do sublinhado */
-    transition: width 0.5s;
-    /* Tempo de transição para animação */
-}
-
-/* Animação quando o mouse passar por cima do link */
-li:hover::before {
-    width: 100%;
-    /* Ao passar o mouse, a largura do sublinhado será 100% */
-}
-
 ul {
     list-style: none;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
     width: 100%;
     gap: 20px;    
@@ -101,6 +78,33 @@ ul li {
     transition-duration: .6s;
     /* Animação de surgimento dos desafios */
 }
+
+li::before {
+    content: '';
+    /* Pseudo-elementos precisam de um content para serem exibidos */
+    position: absolute;
+    left: 0;
+    /* Começando da esquerda */
+    bottom: 0px;
+    /* Distância do sublinhado do texto (Atualmente não está funcionando) */
+    width: 0;
+    /* Começando com largura 0 */
+    height: 3px;
+    /* Altura do sublinhado */
+    background-color: #40FAFF;
+    /* Cor do sublinhado */
+    transition: width 0.5s;
+    /* Tempo de transição para animação */
+    border-radius: 0px 0px 5px 5px;
+    /* Um leve efeito nas bordas inferiores */
+}
+
+/* Animação quando o mouse passar por cima do link */
+li:hover::before {
+    width: 100%;
+    /* Ao passar o mouse, a largura do sublinhado será 100% */
+}
+
 
 ul li:hover {
     box-shadow: 0px 0px 20px #40FAFF;
